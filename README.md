@@ -46,11 +46,11 @@ New-ADUser -Name "John White" -SamAccountName "jwhite" `
 ```
 ## Deployment & Provisioning Evidence:
 
-![PowerShell Script Execution](powershell-script.png)
+![PowerShell Script Execution](img/powershell-script.png)
 
 Figure 1: PowerShell ISE console successfully processing the automation logic.
 
-![Active Directory Infrastructure Verification](ad-verification.png)
+![Active Directory Infrastructure Verification](img/ad-verification.png)
 
 Figure 2: Active Directory Users and Computers console reflecting the clean OU hierarchy and newly created corporate user.
 
@@ -62,14 +62,14 @@ Control Panel Restriction: Enabled the "Prohibit access to Control Panel and PC 
 
 Interactive Shell Mitigation (CMD Block): Enabled "Prevent access to the command prompt", which dynamically drops and blocks interactive command-line access upon execution, preventing unprivileged script execution.
 
-![GPO Configuration in Editor - Part 1](gpo-config-1.png)
-![GPO Configuration in Editor - Part 2](gpo-config-2.png)
+![GPO Configuration in Editor - Part 1](img/gpo-config-1.png)
+![GPO Configuration in Editor - Part 2](img/gpo-config-2.png)
 
 Figures 3 & 4: Group Policy Management Editor mapping specific user-level restrictions.
 
 To guarantee immediate domain-wide distribution of the security baselines without waiting for default update intervals, a forced policy refresh was triggered on the server:
 
-![Forced Group Policy Update](gpupdate-force.png)
+![Forced Group Policy Update](img/gpupdate-force.png)
 
 Figure 5: Successfully running gpupdate /force on the Domain Controller terminal.
 
@@ -79,16 +79,16 @@ After successfully joining the Windows 11 workstation to the domain, logging in 
 A. Control Panel Interception Test:
 The operating system intercepts user access and immediately triggers an administrative restriction message.
 
-![Control Panel Block on Client](client-control-panel-1.png)
-![System Restriction Message](client-control-panel-2.png)
+![Control Panel Block on Client](img/client-control-panel-1.png)
+![System Restriction Message](img/client-control-panel-2.png)
 
 Figures 6 & 7: Evidence of successful mitigation preventing John White from accessing core operating system settings.
 
 B. Command Prompt (CMD) Execution Test:
 When attempting to open the terminal, the active Group Policy intercepts the process and automatically kills the window as soon as a key is pressed, effectively rendering the interactive shell useless to the end-user.
 
-![CMD Execution Attempt](cmd-restriction-1.png)
-![Preventive Terminal Closure](cmd-restriction-2.png)
+![CMD Execution Attempt](img/cmd-restriction-1.png)
+![Preventive Terminal Closure](img/cmd-restriction-2.png)
 
 Figures 8 & 9: Technical validation demonstrating active shell mitigation on the Windows 11 host.
 
