@@ -1,4 +1,3 @@
-
 # Infrastructure & Network Administration Portfolio
 **Byron Armando Monzón Alman** | *Telecommunications Engineer*
 
