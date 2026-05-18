@@ -93,7 +93,7 @@ Figures 8 & 9: Technical validation demonstrating active shell mitigation on the
 
 ### Interactive Video Demonstration
 To review the live validation flow (Domain authentication, forced password reset process, and visual GPO restriction auditing), you can play the project video demo through the following link:
-https://youtu.be/C6dqjJCIHQI
-Watch the Interactive Project Demo Video Here
+
+**[Watch the Live Project Demonstration on YouTube](https://youtu.be/C6dqjJCIHQI)**
 
 This lab is a part of my technical validation series focused on Systems Administration, Network Services, and Infrastructure Engineering.
