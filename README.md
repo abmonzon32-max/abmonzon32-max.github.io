@@ -92,7 +92,7 @@ When attempting to open the terminal, the active Group Policy intercepts the pro
 Figures 8 & 9: Technical validation demonstrating active shell mitigation on the Windows 11 host.
 
 ### Interactive Video Demonstration
-To review the live validation flow (Domain authentication, forced password reset process, and visual GPO restriction auditing), you can play the project video demo through the following link:
+You can play the project video demo through the following link:
 
 **[Watch the Live Project Demonstration on YouTube](https://youtu.be/C6dqjJCIHQI)**
 
